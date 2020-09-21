@@ -16,8 +16,8 @@ BBLAYERS ?= " \
   ##OEROOT##/../meta-openembedded/meta-networking \
   ##OEROOT##/../meta-kodi \
   ##OEROOT##/../meta-python2 \
-  ##OEROOT##/../meta-kodi-distro \
+  ##OEROOT##/../meta-kodi-community/meta-kodi-distro \
+  ##OEROOT##/../meta-kodi-community/meta-kodi-cubox-i \
   ##OEROOT##/../meta-freescale \
   ##OEROOT##/../meta-freescale-3rdparty \
-  ##OEROOT##/../meta-kodi-cubox-i \
   "

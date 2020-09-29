@@ -251,6 +251,10 @@ PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
 CONF_VERSION = "1"
 
 MACHINE = "libretech-ac"
+#MACHINE = "hardkernel-odroidc1"
+
+IMAGE_FSTYPES_append = " wic.bz2"
+IMAGE_FSTYPES_remove = " wic"
 
 DISTRO_FEATURES_append = " systemd"
 VIRTUAL-RUNTIME_init_manager = "systemd"

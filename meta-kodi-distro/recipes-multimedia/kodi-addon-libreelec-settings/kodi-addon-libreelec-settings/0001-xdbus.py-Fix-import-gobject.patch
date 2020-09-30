@@ -1,0 +1,29 @@
+From 74607740e229db00791af56fc0e2736c40349e36 Mon Sep 17 00:00:00 2001
+From: Leon Anavi <leon@anavi.org>
+Date: Wed, 30 Sep 2020 11:38:37 +0000
+Subject: [PATCH] xdbus.py: Fix import gobject
+
+Replace `import gobject` with `from gi.repository import GObject
+as gobject` to avoid ImportError: No module named gobject.
+
+Signed-off-by: Leon Anavi <leon@anavi.org>
+---
+ src/resources/lib/modules/xdbus.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/resources/lib/modules/xdbus.py b/src/resources/lib/modules/xdbus.py
+index 04e2467..5bb7814 100644
+--- a/src/resources/lib/modules/xdbus.py
++++ b/src/resources/lib/modules/xdbus.py
+@@ -3,7 +3,7 @@
+ # Copyright (C) 2013 Lutz Fiebach (lufie@openelec.tv)
+ 
+ import dbus
+-import gobject
++from gi.repository import GObject as gobject
+ import threading
+ import dbus.service
+ import dbus.mainloop.glib
+-- 
+2.17.1
+

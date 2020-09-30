@@ -6,8 +6,11 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=58a5cc85534ec201eb2e77c3433d309e"
 SRCREV = "ce44935c09668da545652b36a72d5f15857f0e18"
 
 PV = "9.0.0"
-SRC_URI = "git://github.com/LibreELEC/service.libreelec.settings.git;branch=libreelec-9.2;protocol=https \
-          "
+SRC_URI = "\
+	git://github.com/LibreELEC/service.libreelec.settings.git;branch=libreelec-9.2;protocol=https \
+	file://0001-xdbus.py-Fix-import-gobject.patch \
+	file://0001-src-defaults.py-Adjust-systemd-services.patch \
+"
 
 S = "${WORKDIR}/git"
 

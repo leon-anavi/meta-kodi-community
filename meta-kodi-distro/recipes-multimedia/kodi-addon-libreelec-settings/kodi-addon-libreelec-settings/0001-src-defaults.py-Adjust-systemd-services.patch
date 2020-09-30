@@ -1,0 +1,28 @@
+From 2b9aa51a63f938137c97f8f7cf9121226231e62f Mon Sep 17 00:00:00 2001
+From: Leon Anavi <leon@anavi.org>
+Date: Wed, 30 Sep 2020 14:31:43 +0000
+Subject: [PATCH] src/defaults.py: Adjust systemd services
+
+Adjust the default names for systemd services.
+
+Signed-off-by: Leon Anavi <leon@anavi.org>
+---
+ src/defaults.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/defaults.py b/src/defaults.py
+index f302540..8f458b9 100644
+--- a/src/defaults.py
++++ b/src/defaults.py
+@@ -93,7 +93,7 @@ xdbus = {'ENABLED': True}
+ _services = {
+     'sshd': ['sshd.service'],
+     'avahi': ['avahi-daemon.service'],
+-    'samba': ['nmbd.service', 'smbd.service'],
++    'samba': ['nmb.service', 'smb.service'],
+     'bluez': ['bluetooth.service'],
+     'obexd': ['obex.service'],
+     'crond': ['cron.service'],
+-- 
+2.17.1
+

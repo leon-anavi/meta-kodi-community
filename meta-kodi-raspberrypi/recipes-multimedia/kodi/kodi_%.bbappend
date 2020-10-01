@@ -2,6 +2,8 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI += "file://kodi-rpi.service"
 
 WINDOWSYSTEM = "raspberrypi"
+WINDOWSYSTEM_raspberrypi4 = "raspberrypi4"
+
 ARM_INSTRUCTION_SET = "arm"
 do_package_qa[noexec] = "1"
 do_file_ownership[fakeroot] = "1"

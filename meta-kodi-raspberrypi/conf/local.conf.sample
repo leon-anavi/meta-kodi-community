@@ -253,6 +253,8 @@ CONF_VERSION = "1"
 #MACHINE = "raspberrypi3"
 MACHINE = "raspberrypi4"
 
+GPU_MEM = "128"
+
 ENABLE_UART = "1"
 
 LICENSE_FLAGS_WHITELIST = "commercial"

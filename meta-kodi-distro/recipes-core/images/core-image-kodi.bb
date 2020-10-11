@@ -22,6 +22,7 @@ IMAGE_INSTALL_append = " \
 "
 
 IMAGE_INSTALL_append_rpi = "omxplayer"
+IMAGE_INSTALL_append_cubox-i = " pulseaudio pulseaudio-server"
 
 # Install language packs
 IMAGE_INSTALL_append = " \

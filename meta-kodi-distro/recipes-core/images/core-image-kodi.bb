@@ -20,6 +20,7 @@ IMAGE_INSTALL_append = " \
 	setxkbmap \
 	alsa-utils alsa-utils-speakertest \
 	nano vim \
+	transmission transmission-web \
 "
 
 IMAGE_INSTALL_append_rpi = "omxplayer"

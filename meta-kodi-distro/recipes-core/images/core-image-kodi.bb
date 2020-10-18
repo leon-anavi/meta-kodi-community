@@ -19,6 +19,7 @@ IMAGE_INSTALL_append = " \
 	samba-base \
 	setxkbmap \
 	alsa-utils alsa-utils-speakertest \
+	nano vim \
 "
 
 IMAGE_INSTALL_append_rpi = "omxplayer"

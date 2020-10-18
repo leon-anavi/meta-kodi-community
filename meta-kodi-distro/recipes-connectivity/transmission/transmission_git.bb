@@ -10,6 +10,7 @@ RDEPENDS_${PN}-web = "${PN}"
 SRC_URI = " \
 	gitsm://github.com/transmission/transmission \
 	file://transmission-daemon \
+	file://settings.json \
 "
 
 # Transmission release 3.00
@@ -54,6 +55,10 @@ do_install_append() {
 		install -d ${D}${systemd_unitdir}/system
 		install -m 0644 ${S}/daemon/transmission-daemon.service ${D}${systemd_unitdir}/system
 	fi
+
+	install -d ${D}/root/.config/transmission-daemon/
+	install -m 0644 ${WORKDIR}/settings.json ${D}/root/.config/transmission-daemon/
+	install -d ${D}/root/Downloads/
 }
 
 PACKAGES += "${PN}-gtk ${PN}-client ${PN}-web"
@@ -61,7 +66,7 @@ PACKAGES += "${PN}-gtk ${PN}-client ${PN}-web"
 FILES_${PN}-client = "${bindir}/transmission-remote ${bindir}/transmission-cli ${bindir}/transmission-create ${bindir}/transmission-show ${bindir}/transmission-edit"
 FILES_${PN}-gtk += "${bindir}/transmission-gtk ${datadir}/icons ${datadir}/applications ${datadir}/pixmaps"
 FILES_${PN}-web = "${datadir}/transmission/web"
-FILES_${PN} = "${bindir}/transmission-daemon ${sysconfdir}/init.d/transmission-daemon ${datadir}/appdata"
+FILES_${PN} = "${bindir}/transmission-daemon ${sysconfdir}/init.d/transmission-daemon ${datadir}/appdata /root/.config/transmission-daemon/ /root/Downloads/"
 
 SYSTEMD_SERVICE_${PN} = "transmission-daemon.service"
 
